@@ -1,0 +1,113 @@
+.lesson-plan {
+  position: relative;
+  .weeks-view {
+    margin: 30px;
+    .lessons-list {
+      list-style: none;
+      .lessons-list-item {
+        min-height: 52px;
+        align-items: flex-end;
+        .lessons-list-item-title {
+          font-size: 12px;
+          color: $text-color;
+          font-family: $font-medium;
+          min-width: 50px;
+        }
+        .lessons-list-item-lessons {
+          border-bottom: 1px solid $stroke-color;
+          margin-left: 15px;
+          padding: 2px 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+        }
+      }
+    }
+  }
+  .lesson-tag {
+    min-height: 47px;
+    min-width: 99px;
+    background-color: rgba(16, 199, 227, 0.2);
+    border-radius: 6px;
+    border-left: 3px solid $secondary;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    cursor: pointer;
+    &.secondary{
+      background-color: rgba(232, 169, 27, 0.2);
+      border-left: 3px solid #E8A91B;
+    }
+    span {
+      font-size: 12px;
+      color: $text-color;
+      font-family: $font-medium;
+      &:first-child {
+        color: $primary;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+.lesson-detail-view {
+  padding: 30px;
+  h4 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-family: $font-bold;
+    color: $primary;
+  }
+  ul {
+    list-style: none;
+    margin: 15px 0 0 0 !important;
+    padding: 0;
+    li {
+      padding: 10px 0;
+      border-bottom: 1px solid $stroke-color;
+      display: flex;
+      span {
+        color: $text-color;
+        font-size: 15px;
+        font-family: $font-medium;
+        &:first-child {
+          flex: 0.6;
+        }
+        &:last-child {
+          flex: 0.4;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+.add-lesson {
+  .add-lesson-form-container {
+    .add-lesson-form {
+      display: flex;
+      flex-direction: row;
+      .add-lesson-form-left {
+        width: 320px;
+        padding: 30px;
+        border-right: 1px solid $stroke-color;
+        h6 {
+          font-size: 16px;
+          font-family: $font-bold;
+          color: $primary;
+          margin: 0 0 25px;
+        }
+      }
+      .add-lesson-form-right {
+        h4 {
+          font-size: 22px;
+          font-family: $font-bold;
+          color: $primary;
+          margin: 0 0 25px;
+        }
+        flex: 1;
+        padding: 30px;
+      }
+    }
+  }
+}

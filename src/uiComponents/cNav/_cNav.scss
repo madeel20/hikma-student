@@ -1,0 +1,11 @@
+.page-nav {
+  margin-bottom: 30px;
+  align-items: center;
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    font-family: $font-semiBold;
+    color: $black;
+    flex: 1;
+  }
+}

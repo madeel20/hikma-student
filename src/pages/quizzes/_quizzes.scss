@@ -1,0 +1,72 @@
+.create-quiz-form-container {
+}
+.create-quiz-container {
+  .quiz-detail-container {
+    padding: 30px;
+    min-width: 320px;
+    border-right: 1px solid $stroke-color;
+    h6 {
+      font-size: 16px;
+      font-family: $font-bold;
+      color: $primary;
+      margin: 0 0 20px 0;
+    }
+  }
+  .quiz-questions-container {
+    width: calc(100% - 320px);
+    padding: 30px;
+    h4 {
+      font-size: 30px;
+      font-family: $o-font-bold;
+      color: $primary;
+      margin: 0 0 20px 0;
+    }
+    .questions {
+      .question {
+        display: flex;
+        flex-direction: column;
+        .question-text {
+          font-size: 15px;
+          font-family: $font-semiBold;
+          color: $primary;
+          margin: 0 0 10px 0;
+          display: flex;
+        }
+        .question-answers {
+          display: flex;
+          flex-direction: column;
+          .ant-checkbox-wrapper {
+            margin: 0 0 15px 0;
+            span {
+              &:last-child {
+                padding: 0 5px 0 10px;
+                font-size: 15px;
+                font-family: $font-medium;
+                color: $primary;
+              }
+            }
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .add-question {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      svg {
+        font-size: 18px;
+        color: $text-color;
+        margin: 0 5px 0 0;
+      }
+      span {
+        font-size: 16px;
+        font-family: $font-medium;
+        color: $text-color;
+      }
+    }
+  }
+}

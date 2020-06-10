@@ -1,0 +1,109 @@
+.dashboard {
+  width: 100%;
+  .flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .flex-left {
+      width: calc(100% - 300px);
+      padding-right: 50px;
+    }
+    .flex-right {
+      width: 300px;
+    }
+  }
+}
+
+.graphContainer {
+  width: 100%;
+}
+
+.c-chart {
+  background: #162a8f;
+  box-shadow: 0 10px 12px rgba(0, 8, 46, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  .header {
+    padding: 10px 15px 0;
+    margin-bottom: 50px;
+    h5 {
+      font-size: 38px;
+      font-family: $font-semiBold;
+      color: $white;
+      margin: 0 0 5px 0;
+    }
+    p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 12px;
+      font-family: $font-semiBold;
+    }
+  }
+}
+
+//hours list styling
+.hours {
+  width: 100%;
+  .basic-section-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .basic-section-list-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 0 12px 0;
+      border-bottom: 1px solid #e8ebf0;
+      .basic-section-icon {
+        color: #10c7e3;
+        font-size: 20px;
+      }
+      .text {
+        margin: 0 10px 0 10px;
+        font-size: 14px;
+        font-family: "HKGrotesk-Medium";
+        color: #111c55;
+        flex: 1;
+      }
+      .secondary-text {
+        color: #787d98;
+        font-size: 12px;
+        font-family: "HKGrotesk-Medium";
+        margin-bottom: 10px;
+        display: contents;
+      }
+    }
+  }
+}
+
+//announcement list styling
+.announcement {
+  width: 100%;
+  .basic-section-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .basic-section-list-item {
+      display: flex;
+      padding: 12px 0 12px 0;
+      border-bottom: 1px solid #e8ebf0;
+      .basic-section-icon {
+        color: #10c7e3;
+        font-size: 20px;
+      }
+      .text {
+        margin: 0 10px 0 10px;
+        font-size: 14px;
+        font-family: "HKGrotesk-Medium";
+        color: #111c55;
+        flex: 1;
+      }
+      .secondary-text {
+        color: #787d98;
+        font-size: 12px;
+        font-family: "HKGrotesk-Medium";
+        margin-bottom: 10px;
+        display: contents;
+      }
+    }
+  }
+}

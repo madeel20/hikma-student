@@ -1,0 +1,45 @@
+
+.upload-with-drag{
+  border: 1px dashed $secondary;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  outline: none;
+  input {
+    outline: none;
+    border: none;
+  }
+  img{
+    width: 135px;
+    height: 130px;
+    margin-bottom: 15px;
+  }
+  .title {
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-family: $font-medium;
+    color: $primary;
+    span {
+      color: $secondary;
+    }
+  }
+  .types {
+    margin: 0;
+    font-size: 12px;
+    font-family: $font-medium;
+    color: $text-color;
+  }
+  &.small {
+    padding: 25px 15px;
+    img{
+      width: 106px;
+      height: 89px;
+      margin-bottom: 15px;
+    }
+  }
+}

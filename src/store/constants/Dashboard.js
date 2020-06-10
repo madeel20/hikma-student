@@ -1,0 +1,5 @@
+const Dashboard = {
+    GET_UPCOMING_LESSONS_API: 'GET_UPCOMING_LESSONS_API',
+    GET_UPCOMING_EVENTS_API: 'GET_UPCOMING_EVENTS_API',
+};
+export default Dashboard;

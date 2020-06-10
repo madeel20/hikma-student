@@ -1,26 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { withRouter } from "react-router-dom";
+import { Root } from "./routing";
+import {connect} from "react-redux";
+import {checkAuth} from "./store/actions/Users";
+import {Loading} from "./uiComponents";
+import {getCountries} from "./store/actions/Common";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+    checkTokenInParamAndSet = () => {
+        const { history, checkAuth } = this.props;
+        let obj = {};
+        let search = (window.location && window.location.search) ? window.location.search.substring(1) : '';
+        if (search) {
+            obj = JSON.parse('{"' + search.replace(/&/g, '","').replace(/=/g, '":"') + '"}', function (key, value) { return key === "" ? value : decodeURIComponent(value) })
+        }
+        if (obj.token) {
+            checkAuth(obj.token, history);
+            window.history.replaceState('', '', window.location.href.split("?")[0]);
+        } else {
+            checkAuth(null, history)
+        }
+    };
+
+    UNSAFE_componentWillMount () {
+        this.checkTokenInParamAndSet();
+        this.props.getCountries()
+
+    }
+
+    render() {
+        const {loading} = this.props;
+        return (
+            <div className="app-root">
+                {loading ? <Loading/> : null}
+                <Root {...this.props}/>
+            </div>
+        );
+    }
 }
 
-export default App;
+const mapStateToProps = ({users}) => {
+    return {
+        loading: users.checkAuthLoading
+    }
+};
+const mapDispatchToProps = {
+    checkAuth,
+    getCountries
+};
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
